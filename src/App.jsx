@@ -1,8 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { createContext, useContext } from 'react';
-import { useFetchData } from './data/useFetchData';
 import ProductList from './components/ProductList';
 import './App.css'
+import ProductDetails from './components/ProductDetail';
 
 function App() {
 
@@ -10,6 +9,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<ProductList />} />
+        <Route path="/article/:id" element={<ProductDetails />} />
       </Routes>
     </BrowserRouter>
   )

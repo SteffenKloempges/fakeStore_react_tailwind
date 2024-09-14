@@ -1,8 +1,6 @@
 import { Link } from "react-router-dom";
 
 const ProductItem = ({ price, image, title, id }) => {
-    console.log({ price, image, title, id })
-
 
     return (
         <Link to={`/article/${id}`} className="block bg-slate-100 p-2 rounded-md">
