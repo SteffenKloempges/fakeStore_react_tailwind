@@ -15,7 +15,7 @@ const ProductDetails = () => {
 
 
     return (
-        <section className="max-w-2xl p-4">
+        <section className="max-w-2xl p-4 mx-auto">
             <button onClick={() => navigate(-1)}
                 className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500"
             >Back</button>
