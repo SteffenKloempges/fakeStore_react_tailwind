@@ -15,16 +15,20 @@ const ProductDetails = () => {
 
 
     return (
-        <section className="max-w-2xl">
-            <button onClick={() => navigate(-1)}>Back</button>
+        <section className="max-w-2xl p-4">
+            <button onClick={() => navigate(-1)}
+                className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500"
+            >Back</button>
             <img src={data.image} alt="" className="w-1/2 mx-auto my-8" />
-            <h1>{data.title}</h1>
-            <p>{data.description}</p>
-            <p>{data.price} €</p>
-            <div>
-                <button onClick={() => setNumberOfItems(numberOfItems + 1)}>+</button>
+            <h1 className="py-4 text-xl">{data.title}</h1>
+            <p className="py-4">{data.description}</p>
+            <p className="py-4">{data.price} €</p>
+            <div className="flex justify-center items-center gap-4 py-4">
+                <button onClick={() => setNumberOfItems(numberOfItems + 1)}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">+</button>
                 <p>{numberOfItems}</p>
-                <button onClick={() => setNumberOfItems(numberOfItems - 1)}>-</button>
+                <button onClick={() => setNumberOfItems(numberOfItems - 1)}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">-</button>
             </div>
         </section>
     );

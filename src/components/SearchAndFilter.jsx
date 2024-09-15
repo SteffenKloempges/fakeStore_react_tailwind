@@ -33,16 +33,24 @@ const SearchAndFilter = ({ allProducts, setAllProducts }) => {
     return (
         <>
             <div className="flex gap-4 justify-center my-4">
-                <button onClick={() => sortBy("desc")}>Highest Price</button>
-                <button onClick={() => sortBy("asc")}>Lowest Price</button>
-                <button onClick={() => sortBy("rate")}>Best Rate</button>
-                <button onClick={() => setAllProducts(data)}>View All</button>
+                <button onClick={() => sortBy("desc")}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">Highest Price</button>
+                <button onClick={() => sortBy("asc")}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">Lowest Price</button>
+                <button onClick={() => sortBy("rate")}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">Best Rate</button>
+                <button onClick={() => setAllProducts(data)}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">View All</button>
             </div>
             <div className="flex gap-4 justify-center mb-4">
-                <button onClick={() => filterBy("women's clothing")}>women's clothing</button>
-                <button onClick={() => filterBy("men's clothing")}>men's clothing</button>
-                <button onClick={() => filterBy("jewelery")}>jewelery</button>
-                <button onClick={() => filterBy("electronics")}>electronics</button>
+                <button onClick={() => filterBy("women's clothing")}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">women's clothing</button>
+                <button onClick={() => filterBy("men's clothing")}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">men's clothing</button>
+                <button onClick={() => filterBy("jewelery")}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">jewelery</button>
+                <button onClick={() => filterBy("electronics")}
+                    className="bg-mantis-400 rounded-md px-4 py-2 text-white transition-colors hover:bg-mantis-500">electronics</button>
             </div>
         </>
 

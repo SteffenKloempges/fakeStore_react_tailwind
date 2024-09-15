@@ -15,9 +15,9 @@ const ProductList = () => {
     if (error) return <h1>Seite aktuell nicht aufrufbar...</h1>
     return (
         <>
-            <h1 className="text-red-300">fakeStore</h1>
+            <h1 className="text-mantis-900 text-4xl text-center py-4">fakeStore</h1>
             <SearchAndFilter allProducts={allProducts} setAllProducts={setAllProducts} />
-            <section className="grid grid-cols-3 gap-6 max-w-2xl bg-slate-300 p-6">
+            <section className="grid grid-cols-3 gap-6 max-w-3xl p-6 mx-auto">
                 {allProducts?.map((product) => <ProductItem
                     key={product.id}
                     price={product.price}
@@ -25,7 +25,6 @@ const ProductList = () => {
                     title={product.title}
                     id={product.id}
                 />
-
                 )}
             </section>
         </>

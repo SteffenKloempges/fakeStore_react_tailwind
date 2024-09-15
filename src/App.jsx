@@ -1,17 +1,20 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ProductList from './components/ProductList';
-import './App.css'
 import ProductDetails from './components/ProductDetail';
+import { useState } from 'react';
 
 function App() {
+  const [shoppingCart, setShoppingCart] = useState([]);
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<ProductList />} />
-        <Route path="/article/:id" element={<ProductDetails />} />
-      </Routes>
-    </BrowserRouter>
+    <div className='bg-mantis-200'>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<ProductList />} />
+          <Route path="/article/:id" element={<ProductDetails />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   )
 }
 
